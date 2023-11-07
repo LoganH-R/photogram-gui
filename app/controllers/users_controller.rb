@@ -1,4 +1,4 @@
-Class UsersController < ApplicationController
+class UsersController < ApplicationController
   def index
     matching_users = User.all
     
@@ -8,7 +8,7 @@ Class UsersController < ApplicationController
   end
 
   def show
-  url_username = params.fetch("path_username")
+    url_username = params.fetch("path_username")
 
     matching_usernames = User.where({ :username => url_username})
 
